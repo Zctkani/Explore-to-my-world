@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Dreams</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --violet-bg: #e0bbff;        
+      --violet-card: #fbefff;      
+      --violet-dark: #5a2a46;
+      --violet-mid: #7a4f91;
+      --violet-accent: #a34fa4;
+      --radius-md: 16px;
+      --radius-sm: 10px;
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    body {
+      margin: 0;
+      padding: 50px 20px 80px;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--violet-bg);
+      color: var(--violet-dark);
+      text-align: center;
+      min-height: 100vh;
+      position: relative;
+      overflow-y: auto;
+    }
+
+    /* Floating stickers (same pattern site-wide) */
+    .bg-stickers {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .bg-stickers span {
+      position: absolute;
+      font-size: 32px;
+      opacity: 0.85;
+      animation: float 6s ease-in-out infinite;
+    }
+    .bg-stickers span.small { font-size: 22px; opacity: 0.65; animation-duration: 7s; }
+    .bg-stickers span.tiny  { font-size: 18px; opacity: 0.5;  animation-duration: 5s; }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0) rotate(0deg); }
+      50%     { transform: translateY(-6px) rotate(3deg); }
+    }
+
+    /* main content */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      background-color: var(--violet-card);
+      padding: 30px 25px 48px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: var(--violet-accent);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 22px;
+      color: var(--violet-accent);
+      margin: 36px 0 16px;
+    }
+
+    .dream {
+      text-align: left;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #5e3a70;
+      margin-bottom: 20px;
+    }
+    .dream strong {
+      color: var(--violet-mid);
+    }
+
+    /* future plans grid (cards) */
+    .plans-grid {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    @media (min-width:520px){
+      .plans-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .plan-card {
+      background: rgba(255,255,255,0.9);
+      padding: 16px 14px;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+      font-size: 14px;
+      line-height: 1.4;
+      color: #5e3a70;
+    }
+    .plan-card strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--violet-accent);
+      font-size: 15px;
+    }
+
+    /* step list */
+    .steps {
+      text-align: left;
+      margin: 0 auto 36px;
+      max-width: 520px;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #5e3a70;
+      list-style: none;
+      padding: 0;
+    }
+    .steps li {
+      margin-bottom: 10px;
+      padding-left: 26px;
+      position: relative;
+    }
+    .steps li::before {
+      content: "✨";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .quote {
+      margin-top: 30px;
+      font-style: italic;
+      color: #7a4f91;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Stickers -->
+  <div class="bg-stickers">
+    <span style="top:5%; left:8%;">🌸</span>
+    <span class="small" style="top:18%; left:78%;">💜</span>
+    <span class="tiny" style="top:30%; left:20%;">✨</span>
+    <span class="small" style="top:45%; left:90%;">🌷</span>
+    <span class="tiny" style="top:60%; left:12%;">💫</span>
+    <span class="small" style="top:72%; left:65%;">🌸</span>
+    <span style="top:88%; left:30%;">🌼</span>
+  </div>
+
+  <div class="container">
+    <h1>🌠 My Dreams</h1>
+
+    <div class="dream">
+      I dream of becoming someone who’s not only successful but also <strong>happy with what I do</strong>. My biggest goal is to build a career in the tech world — maybe as a <strong>web or app developer</strong> — where I can use creativity and logic together.
+    </div>
+
+    <div class="dream">
+      <strong>Business Dream: Sari‑Sari Store (or Online Shop!)</strong><br>
+      Someday I want to start my own small business — even a <em>family sari‑sari store</em> in our barangay would make me proud. I imagine adding a cute pastel theme, digital price list, maybe GCash payments, and selling small things I love: snacks, school supplies, and <em>stickers / mini tech accessories</em>. Starting small, learning, then growing into something bigger!
+    </div>
+
+    <div class="dream">
+      I also want to try <strong>online selling</strong> — maybe custom digital designs, journals, or a mini store that supports my studies while helping my family.
+    </div>
+
+    <div class="dream">
+      Most of all, I hope to become <strong>confident, independent, and inspiring</strong> — especially for others who are shy, unsure, or growing slowly like me.
+    </div>
+
+    <!-- Future Plans Grid -->
+    <h2>📅 Future Plans</h2>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <strong>Finish BSIT</strong>
+        Graduate and build portfolio projects I can show to jobs or clients.
+      </div>
+      <div class="plan-card">
+        <strong>Mini Online Shop</strong>
+        Start by selling digital stickers or printable templates.
+      </div>
+      <div class="plan-card">
+        <strong>Sari‑Sari Start</strong>
+        Save capital, list products, and track sales using a simple app.
+      </div>
+    </div>
+
+    <h2>🚀 Steps I’m Taking</h2>
+    <ul class="steps">
+      <li>Learning HTML/CSS and app building (MIT App Inventor, ESP32 experiments).</li>
+      <li>Saving design ideas & product lists for a future sari‑sari / online store.</li>
+      <li>Practicing simple budgeting and price tracking in Google Sheets.</li>
+      <li>Building confidence by sharing my projects online and in school.</li>
+    </ul>
+
+    <div class="quote">“Dreams don’t work unless you do.”</div>
+  </div>
+</body>
+</html>

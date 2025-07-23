@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Favorites</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --violet-bg: #e0bbff;        
+      --violet-card: #fbefff;      
+      --violet-dark: #5a2a46;
+      --violet-mid: #a94476;
+      --violet-accent: #c84d90;
+      --radius-md: 16px;
+      --radius-sm: 10px;
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    body {
+      margin: 0;
+      padding: 50px 20px 80px;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--violet-bg);
+      color: var(--violet-dark);
+      text-align: center;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* Floating stickers */
+    .bg-stickers {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .bg-stickers span {
+      position: absolute;
+      font-size: 32px;
+      opacity: 0.85;
+      animation: float 6s ease-in-out infinite;
+    }
+    .bg-stickers span.small { font-size: 22px; opacity: 0.65; animation-duration: 7s; }
+    .bg-stickers span.tiny  { font-size: 18px; opacity: 0.5;  animation-duration: 5s; }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0) rotate(0deg); }
+      50%     { transform: translateY(-6px) rotate(3deg); }
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      background-color: var(--violet-card);
+      padding: 30px 25px 40px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: var(--violet-accent);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 22px;
+      color: var(--violet-accent);
+      margin: 30px 0 15px;
+    }
+
+    .fav-item {
+      text-align: left;
+      font-size: 15px;
+      margin-bottom: 15px;
+      color: #5e3a70;
+      line-height: 1.6;
+    }
+
+    .fav-item strong {
+      color: var(--violet-mid);
+    }
+
+    .highlight-box {
+      background: #fff0f6;
+      padding: 12px 18px;
+      border-radius: var(--radius-sm);
+      margin: 20px auto;
+      max-width: 500px;
+      color: #853c61;
+      font-size: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .quote {
+      margin-top: 25px;
+      font-style: italic;
+      font-size: 14px;
+      color: #7a4f91;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating Stickers -->
+  <div class="bg-stickers">
+    <span style="top:5%; left:8%;">🌸</span>
+    <span class="small" style="top:18%; left:78%;">💜</span>
+    <span class="tiny" style="top:30%; left:20%;">✨</span>
+    <span class="small" style="top:45%; left:90%;">🌷</span>
+    <span class="tiny" style="top:60%; left:12%;">💫</span>
+    <span class="small" style="top:72%; left:65%;">🌸</span>
+    <span style="top:88%; left:30%;">🌼</span>
+  </div>
+
+  <div class="container">
+    <h1>💖 My Favorites</h1>
+
+    <div class="fav-item">
+      <strong>🎨 Color:</strong> I love the color purple! It gives me a sense of calm, creativity, and elegance. It became my favorite because one of my idols inspired me to love it more.
+    </div>
+
+    <div class="fav-item">
+      <strong>🎧 Music:</strong> I enjoy listening to K-pop, especially ENHYPEN and BTS. One of my favorite songs right now is <em>“Blossoms”</em> by ENHYPEN — and from BTS, I love <em>“Magic Shop”</em> for its comforting message.
+    </div>
+
+    <div class="fav-item">
+      <strong>📺 Shows:</strong> I enjoy watching K-Dramas and variety shows, especially when my favorite idols appear in them.
+    </div>
+
+    <div class="fav-item">
+      <strong>📓 Stationery:</strong> I have a soft spot for aesthetic journals, pens, and cute stickers — organizing with style makes me feel productive.
+    </div>
+
+    <div class="fav-item">
+      <strong>🍰 Dessert:</strong> I’m not too picky with food, but I love sweet things like cake and strawberry-flavored snacks.
+    </div>
+
+    <!-- Added Highlight Section -->
+    <h2>🌟 Top 3 Favorites</h2>
+    <div class="highlight-box">
+      Purple notebooks, BTS playlists, and strawberry cake on a Sunday afternoon — these are my ultimate comfort favorites!
+    </div>
+
+    <!-- Closing Quote -->
+    <div class="quote">“Collect moments, not just things you like.”</div>
+  </div>
+</body>
+</html>

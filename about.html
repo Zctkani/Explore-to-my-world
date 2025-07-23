@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --violet-bg: #e0bbff;        
+      --violet-card: #fbefff;      
+      --violet-card2: rgba(255,255,255,0.9);
+      --violet-dark: #5a2a46;
+      --violet-mid: #7a4f91;
+      --violet-accent: #a34fa4;
+      --violet-tag-bg: #f4e1ff;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --radius-sm: 10px;
+      --shadow-sm: 0 4px 12px rgba(0,0,0,0.06);
+      --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    body {
+      margin: 0;
+      padding: 50px 20px 80px;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--violet-bg);
+      color: var(--violet-dark);
+      text-align: center;
+      min-height: 100vh;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    /* floating stickers */
+    .bg-stickers {
+      position: fixed; 
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .bg-stickers span {
+      position: absolute;
+      font-size: 32px;
+      filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 4px #fff);
+      opacity: 0.85;
+      animation: float 6s ease-in-out infinite;
+    }
+    .bg-stickers span.small { font-size: 22px; opacity: 0.65; animation-duration: 7s; }
+    .bg-stickers span.tiny  { font-size: 18px; opacity: 0.5;  animation-duration: 5s; }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0) rotate(0deg); }
+      50%     { transform: translateY(-6px) rotate(3deg); }
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: var(--violet-card);
+      padding: 30px 24px 40px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: var(--violet-accent);
+      margin-bottom: 20px;
+    }
+
+    .section {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #5f3d70;
+      margin-bottom: 30px;
+      text-align: justify;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px 16px;
+      text-align: left;
+      font-size: 15px;
+      color: #4e3c5f;
+      margin-bottom: 32px;
+    }
+    @media (min-width:480px){
+      .info-grid {
+        grid-template-columns: auto 1fr;
+        align-items: start;
+      }
+      .info-label { text-align: right; padding-right: 8px; }
+    }
+    .info-label {
+      font-weight: 600;
+      color: var(--violet-mid);
+      min-width: 100px;
+      display: inline-block;
+    }
+    .info-value {
+      word-break: break-word;
+    }
+
+    h2 {
+      font-size: 22px;
+      color: var(--violet-accent);
+      margin: 40px 0 16px;
+      text-align: center;
+    }
+
+    .studies {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .study-item {
+      background: var(--violet-card2);
+      padding: 16px 18px;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+      text-align: left;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    .study-item strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--violet-accent);
+    }
+
+    .goals {
+      text-align: left;
+      margin: 0 auto 40px;
+      max-width: 520px;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #5f3d70;
+    }
+    .goals li {
+      margin-bottom: 8px;
+    }
+
+    /* Social Media Section */
+    .socials {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .socials a {
+      display: inline-block;
+      padding: 10px 18px;
+      background: #ffffffcc;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-size: 15px;
+      color: var(--violet-dark);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .socials a:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .quote {
+      margin-top: 40px;
+      font-style: italic;
+      font-size: 14px;
+      color: #7a4f91;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-stickers">
+    <span style="top:5%; left:8%;">🌸</span>
+    <span class="small" style="top:18%; left:78%;">💜</span>
+    <span class="tiny" style="top:30%; left:20%;">✨</span>
+    <span class="small" style="top:45%; left:90%;">🌷</span>
+    <span class="tiny" style="top:60%; left:12%;">💫</span>
+    <span class="small" style="top:72%; left:65%;">🌸</span>
+    <span style="top:88%; left:30%;">🌼</span>
+  </div>
+
+  <div class="container">
+    <h1>✨ About Me</h1>
+
+    <div class="section">
+      Hello! I’m a college student currently taking up <strong>BS in Information Technology (BSIT)</strong>. 
+      I love mixing <em>creativity + technology</em> — building simple apps, designing cute websites, and learning how things work behind the screen. 
+      This website is my space to share who I am, what I’m learning, and the little things that inspire me every day.
+    </div>
+
+    <div class="info-grid">
+      <div class="info-label">Name:</div>
+      <div class="info-value">Annie C. Ramos</div>
+
+      <div class="info-label">Address:</div>
+      <div class="info-value">Imbiao, Roxas, Isabela</div>
+
+      <div class="info-label">Email:</div>
+      <div class="info-value"><a href="mailto:ramosannie376@gmail.com">ramosannie376@gmail.com</a></div>
+
+      <div class="info-label">Contact:</div>
+      <div class="info-value"><a href="tel:09357272639">0935 727 2639</a></div>
+    </div>
+
+    <h2>💻 What I’m Studying in BSIT</h2>
+    <div class="studies">
+      <div class="study-item">
+        <strong>Programming Basics</strong>
+        Learning logic, variables, loops, and events through MIT App Inventor and simple Arduino/ESP32 projects.
+      </div>
+      <div class="study-item">
+        <strong>Web Design</strong>
+        Practicing HTML & CSS to build cute, responsive personal pages (like this site!).
+      </div>
+      <div class="study-item">
+        <strong>Data & Cloud</strong>
+        Connecting apps to Google Sheets / databases so information can be saved and used in projects.
+      </div>
+    </div>
+
+    <h2>🌱 My Goals</h2>
+    <ul class="goals">
+      <li>Finish my BSIT degree and build my first real mobile app.</li>
+      <li>Get better at HTML, CSS, and JavaScript so I can design my own websites.</li>
+      <li>Learn how to connect apps to databases and cloud services.</li>
+      <li>Create a portfolio that shows my school projects and personal style.</li>
+    </ul>
+
+    <h2>📱 Follow Me</h2>
+    <div class="socials">
+      <a href="https://www.facebook.com/share/14EJH6WHZaB/" target="_blank">🌐 Facebook</a>
+      <a href="https://www.instagram.com/canedo.anieramoz?igsh=MXdnNzh2OXVvdHJ2bw%3D%3D&fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExOW45S1B1bkpndEx3SldRcwEe6XMzwNydYnxhron3XLtAb21gcojqs5Fnb8eVSxaYsJiNj-TIIYBTLrTiWno_aem_2hNsX0CDSNeLjeHjeSzzTg" target="_blank">📷 Instagram</a>
+      <a href="https://www.tiktok.com/@an.nie012?_t=ZS-8yBWASavW8e&_r=1&fbclid=IwY2xjawLpvjpleHRuA2FlbQIxMQABHg_h7O095jiurLfdv4EIPvI4aSRtNzOWfxsNzWrYPs7EohYcUNZVPq6haHKb_aem_XPjsliDeOs-ZSvHn0LcsHA" target="_blank">🎵 TikTok</a>
+    </div>
+
+    <div class="quote">“Small steps every day lead to big changes.”</div>
+  </div>
+</body>
+</html>

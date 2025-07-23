@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Interests</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --violet-bg: #e0bbff;        
+      --violet-card: #fbefff;      
+      --violet-dark: #5a2a46;
+      --violet-mid: #7a4f91;
+      --violet-accent: #a34fa4;
+      --radius-md: 16px;
+      --radius-sm: 10px;
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    body {
+      margin: 0;
+      padding: 50px 20px 80px;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--violet-bg);
+      color: var(--violet-dark);
+      text-align: center;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* Floating stickers */
+    .bg-stickers {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .bg-stickers span {
+      position: absolute;
+      font-size: 32px;
+      opacity: 0.85;
+      animation: float 6s ease-in-out infinite;
+    }
+    .bg-stickers span.small { font-size: 22px; opacity: 0.65; animation-duration: 7s; }
+    .bg-stickers span.tiny  { font-size: 18px; opacity: 0.5;  animation-duration: 5s; }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0) rotate(0deg); }
+      50%     { transform: translateY(-6px) rotate(3deg); }
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      background-color: var(--violet-card);
+      padding: 30px 25px 40px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: var(--violet-accent);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 22px;
+      color: var(--violet-accent);
+      margin: 30px 0 15px;
+    }
+
+    .interest, .hobby, .inspire {
+      text-align: left;
+      font-size: 15px;
+      margin-bottom: 15px;
+      color: #5e3a70;
+      line-height: 1.6;
+    }
+
+    .interest strong, .hobby strong {
+      color: var(--violet-mid);
+    }
+
+    .quote {
+      margin-top: 20px;
+      font-style: italic;
+      font-size: 14px;
+      color: #7a4f91;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Stickers -->
+  <div class="bg-stickers">
+    <span style="top:5%; left:8%;">🌸</span>
+    <span class="small" style="top:18%; left:78%;">💜</span>
+    <span class="tiny" style="top:30%; left:20%;">✨</span>
+    <span class="small" style="top:45%; left:90%;">🌷</span>
+    <span class="tiny" style="top:60%; left:12%;">💫</span>
+    <span class="small" style="top:72%; left:65%;">🌸</span>
+    <span style="top:88%; left:30%;">🌼</span>
+  </div>
+
+  <div class="container">
+    <h1>💡 My Interests</h1>
+
+    <div class="interest">
+      <strong>Technology:</strong> I enjoy exploring how websites, apps, and digital tools work. I’m especially curious about front-end design and creative interfaces.
+    </div>
+
+    <div class="interest">
+      <strong>📈 Business & Entrepreneurship:</strong> I'm interested in starting and running my own business someday. I enjoy creating branding ideas and thinking of ways to bring value to others.
+    </div>
+
+    <div class="interest">
+      <strong>💬 Language & Communication:</strong> I like writing, learning new expressions, and discovering ways to express ideas more clearly.
+    </div>
+
+    <div class="interest">
+      <strong>📚 Personal Growth:</strong> I’m passionate about self-improvement and enjoy reading motivational content, especially about self-love and confidence.
+    </div>
+
+    <!-- Added Section: Hobbies -->
+    <h2>🎨 Hobbies & Fun</h2>
+    <div class="hobby">
+      <strong>Creative Design:</strong> I love designing layouts, experimenting with color palettes, and adding aesthetic details like stickers and icons to projects.
+    </div>
+    <div class="hobby">
+      <strong>Music & K-Pop:</strong> Listening to BTS and Enhypen gives me energy and creativity while studying or designing.
+    </div>
+    <div class="hobby">
+      <strong>DIY Projects:</strong> I like crafting, personalizing my space, and trying new art ideas.
+    </div>
+
+    <!-- Added Section: Inspiration -->
+    <h2>✨ What Inspires Me</h2>
+    <div class="inspire">
+      “Your vibe attracts your tribe.” I believe in surrounding myself with positivity, creativity, and people who lift each other up.
+    </div>
+    <div class="quote">“Dream big, start small, but most of all, start.”</div>
+  </div>
+</body>
+</html>
