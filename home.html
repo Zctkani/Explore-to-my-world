@@ -18,19 +18,18 @@
 
     body {
       margin: 0;
-      padding: 50px 20px 80px; /* Added bottom padding for scroll space */
+      padding: 50px 20px 80px;
       font-family: 'Poppins', sans-serif;
       background: var(--clr-bg);
       color: var(--clr-text);
       text-align: center;
       min-height: 100vh;
-      overflow-y: auto; /* Enable scrolling */
+      overflow-y: auto; 
       position: relative;
     }
 
-    /* Floating stickers */
     .sticker {
-      position: fixed; /* Fixed so they don’t affect scroll */
+      position: fixed; 
       font-size: 32px;
       opacity: 0.8;
       pointer-events: none;
@@ -45,7 +44,6 @@
       50% { transform: translateY(-8px) rotate(2deg); }
     }
 
-    /* Main card */
     .container {
       max-width: 720px;
       margin: 0 auto;
@@ -110,7 +108,6 @@
   </style>
 </head>
 <body>
-  <!-- Floating Stickers -->
   <span class="sticker" style="top: 5%; left: 8%;">🌸</span>
   <span class="sticker small" style="top: 20%; left: 70%;">💜</span>
   <span class="sticker tiny" style="top: 35%; left: 25%;">✨</span>
@@ -120,9 +117,8 @@
   <span class="sticker" style="top: 85%; left: 20%;">🌼</span>
   <span class="sticker small" style="top: 90%; left: 75%;">✨</span>
 
-  <!-- Main Card -->
   <div class="container">
-    <img src="C:\Users\Marc Jonas\Desktop\HTML\Activity11_Annie\profile.jpg" alt="My Photo" class="profile-pic">
+    <img src="profile.jpg" alt="My Photo" class="profile-pic">
     <h1>Hey there, welcome! 🌼</h1>
     <p>
       I'm so glad you're here! This is my cozy corner on the web where I share my thoughts,
